@@ -1,0 +1,6 @@
+import voltrlc as rlc
+#arguments require values of 
+#(input voltage, resistance, inductance, capacitance)
+rlc.avePeakVoltages(2.5,50,0.2,0.002)
+rlc.freqVoltages(2.5,50,0.2,0.002)
+rlc.freqRatioVoltages(2.5,50,0.2,0.002)

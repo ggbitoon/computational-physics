@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+signal=pd.read_csv(r"C:\Users\caobg\Desktop\Python")
+print(signal)
+
+a=list(signal['Data'])
+
+print("Input threshold")
+threshold=float(input())
+
+b=a[:]
+for i in range(len(b)):
+    if b[i]<threshold:
+        b[i]=0
+peaks=[]
+location=[]
+
+for i in range(len(b)):
+    if b[i-1]<b[i]>b[i+1]:
+        peaks.append(b[i])
+        location.append(i)
+
+print("The peak/s in the dataset is/are",peaks)
+print("The location/s of each is/are", location)
